@@ -15,21 +15,19 @@ public class SECOND {
     public String Secondhello(@PathVariable(name="name")String name,@PathVariable(name="gvari")String gvari){
         List<Person> list=new ArrayList<Person>();
         list.add(0,new Person("goga","iremashvili"));
-        Person ob1=new Person("goga","iremashvili");
-int sum=0;
+
+
 
         for(int i=0;i<list.size();i++){
-            if(list.get(i).getName().equals(ob1.getName()) && list.get(i).getLastname().equals(ob1.getLastname())){
-                sum++;
+            if(list.get(i).getName().equals(name) && list.get(i).getLastname().equals(gvari)){
+
                 return name+" "+gvari;
             }
         }
 
         return "person don't found";
 
-
-
-
     }
 
 }
+
